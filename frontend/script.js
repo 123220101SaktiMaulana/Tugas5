@@ -1,6 +1,6 @@
 // script.js
 
-const API_URL = 'http://localhost:5000/notes';
+const API_URL = 'https://notes-be101-981623652580.us-central1.run.app/Notes';
 
 // Fetch all notes
 
