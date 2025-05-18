@@ -2,11 +2,18 @@ import express from "express";
 import cors from "cors";
 import { json } from "sequelize";
 import router from "./routes/NoteRoutes.js"
+import UserRoutes from "./routes/UserRoutes.js";
+import "./models/UserModel.js";
+import dotenv from "dotenv";
+import cookieParser from "cookie-parser"; 
 
+dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({credentials: true, origin: 'http://localhost:5000'}));
+app.use(cookieParser());
 app.use(express.json());
 app.use(router);
+app.use(UserRoutes);
 
 app.listen(5000, ()=> console.log('server up and running'));
