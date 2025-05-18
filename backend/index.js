@@ -10,7 +10,7 @@ import cookieParser from "cookie-parser";
 dotenv.config();
 const app = express();
 
-app.use(cors({credentials: true, origin: 'http://localhost:5000'}));
+app.use(cors({credentials: true, origin: 'https://notes-be101-981623652580.us-central1.run.app/Notes'}));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
