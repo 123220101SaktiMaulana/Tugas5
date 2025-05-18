@@ -7,11 +7,11 @@ import "./models/UserModel.js";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser"; 
 
-dotenv.config();
+//dotenv.config();
 const app = express();
 
-app.use(cors({credentials: true, origin: 'https://notes-be101-981623652580.us-central1.run.app/Notes'}));
-app.use(cookieParser());
+app.use(cors());
+//app.use(cookieParser());
 app.use(express.json());
 app.use(router);
 app.use(UserRoutes);
