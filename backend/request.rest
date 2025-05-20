@@ -27,7 +27,7 @@ DELETE http://localhost:5000/notes/2
 
 ###
 GET http://localhost:5000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiMUBnbWFpbC5jb20iLCJpYXQiOjE3NDc1NTQzNTEsImV4cCI6MTc0NzU1NDM2Nn0.qaOT5wqdwWe6AQtWru0-Zi62noZl2qHZzHF0raIBzek
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiMUBnbWFpbC5jb20iLCJpYXQiOjE3NDc3MzA3NDUsImV4cCI6MTc0NzczMDc2MH0.pNOZFyAG1FiwWGkOLxWJUKhEJrVRgsycyUSFUCD4To4
 
 ###
 POST http://localhost:5000/users
@@ -46,7 +46,7 @@ Content-Type: application/json
 
 {
     "email": "1@gmail.com",
-    "password": "batubara"
+    "password": "123"
 }
 
 ###
