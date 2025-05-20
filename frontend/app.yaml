@@ -11,4 +11,4 @@ handlers:
     static_files: \1
     upload: (.*)
 
-default_expiration: "0s"  # Waktu cache default
+default_expiration: "1h"  # Waktu cache default
