@@ -10,7 +10,7 @@ import cookieParser from "cookie-parser";
 //dotenv.config();
 const app = express();
 
-app.use(cors({credentials: true, origin: 'https://fe-101-dot-b-12-450709.uc.r.appspot.com/'}));
+app.use(cors({credentials: true, origin: 'https://fe-101-dot-b-12-450709.uc.r.appspot.com'}));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
