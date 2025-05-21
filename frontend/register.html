@@ -86,6 +86,13 @@
                     },
                     body: JSON.stringify({ username, email, password, confPassword })
                 });
+                // const response = await fetch('http://localhost:5000/users', {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json'
+                //     },
+                //     body: JSON.stringify({ username, email, password, confPassword })
+                // });
                 
                 if (response.ok) {
                     alert('Register berhasil! Silakan login.');

@@ -1,7 +1,7 @@
-GET http://localhost:5000/notes
+GET https://notes-be101-981623652580.us-central1.run.app/notes
 
 ###
-GET http://localhost:5000/notes/18
+GET http://localhost:5000/notes/1
 
 ###
 POST http://localhost:5000/notes

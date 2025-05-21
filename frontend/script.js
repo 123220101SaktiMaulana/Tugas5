@@ -1,4 +1,5 @@
 const API_URL = 'https://notes-be101-981623652580.us-central1.run.app';
+// const API_URL = 'http://localhost:5000';
 
 // Ambil token dari localStorage
 const token = localStorage.getItem('token');

@@ -1,25 +1,33 @@
 import Users from "../models/UserModel.js";
 import jwt from "jsonwebtoken";
 
-export const refreshToken = async(req, res) => {
+export const refreshToken = async (req, res) => {
     try {
         const refreshToken = req.cookies.refreshToken;
-        if(!refreshToken) return res.sendStatus(401);
+        if (!refreshToken) return res.sendStatus(401);
         const user = await Users.findAll({
-            where:{
+            where: {
                 refresh_token: refreshToken
             }
         });
-        if(!user[0]) return res.sendStatus(403);
+        if (!user[0]) return res.sendStatus(403);
         jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, decoded) => {
-            if(err) return res.sendStatus(403);
+            if (err) return res.sendStatus(403);
             const userId = user[0].id;
-            const name = user[0].name;
+            const username = user[0].username;
             const email = user[0].email;
-            const accessToken = jwt.sign({userId, name, email}, process.env.ACCESS_TOKEN_SECRET,{
+
+            const accessToken = jwt.sign({
+                userId,
+                username,
+                email
+            }, process.env.ACCESS_TOKEN_SECRET, {
                 expiresIn: '15s'
             });
-            res.json({ accessToken });
+
+            res.json({
+                accessToken
+            });
         });
     } catch (error) {
         console.log(error);

@@ -8,6 +8,10 @@ const Note = db.define(
     {
         judul: DataTypes.STRING,
         konten: DataTypes.STRING,
+        userId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        }
     },
     {
         freezeTableName: true,
