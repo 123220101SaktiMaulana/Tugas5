@@ -11,9 +11,9 @@
 
 <body>
     <div class="container">
-
-        <button id="logoutBtn">Logout</button>
-
+        <div class="header">
+            <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
 
         <h1><i class="fas fa-book-open"></i> Notes App</h1>
 
@@ -59,6 +59,31 @@
             backdrop-filter: blur(5px);
         }
 
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+        }
+
+        #logoutBtn {
+            background: #cf6679;
+            color: #121212;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #logoutBtn:hover {
+            background: #b25463;
+            transform: translateY(-2px);
+        }
+
         h1,
         h2 {
             text-align: center;
@@ -99,37 +124,6 @@
 
         .editor-container:focus-within {
             border-color: #bb86fc;
-        }
-
-        .editor-toolbar {
-            padding: 8px 12px;
-            background: rgba(37, 37, 37, 0.9);
-            border-bottom: 1px solid #333;
-            display: flex;
-            align-items: center;
-        }
-
-        .toolbar-btn {
-            background: none;
-            border: none;
-            width: 32px;
-            height: 32px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 5px;
-            color: #bb86fc;
-            transition: background 0.2s;
-        }
-
-        .toolbar-btn:hover {
-            background: rgba(61, 61, 61, 0.8);
-        }
-
-        .toolbar-divider {
-            width: 1px;
-            height: 20px;
-            background: #444;
-            margin: 0 8px;
         }
 
         .note-form textarea {
@@ -226,7 +220,6 @@
             gap: 8px;
         }
 
-        /* Placeholder color */
         ::placeholder {
             color: #aaa;
             opacity: 1;
